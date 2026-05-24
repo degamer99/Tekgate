@@ -31,7 +31,6 @@ Every word here is written by hand and can be each explained by me
 2. `npm install clsx tailwind-merge`: help with tailwind
 3. folder for all necessary accets like icons and images
 4. Define the types, theme and fonts
-5. IN the github, remove *include in homepage* and add *topics, description and topics*
 6. decide if to use syncfusion ui lib or shadcn
 7. Admin and feed layout: Sidebar, header and footer 
 8. Import, export all components through a index.ts file at the root of the components folder except for shadcne.g
