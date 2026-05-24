@@ -10,6 +10,42 @@
 2. setup auth for sign up, sign in and sign out
 3. make sure my store and zustand is ready for future 
 4. create sign in, sign up and home pages.
+5. server side rendering already by default, understand it more and how to tweak or custom where necessary for our project specific
+6. For seo, add metadata for each page 
+```tsx
+// app/routes/feed.tsx
+// i still need to understand this fully
+import type { Route } from "./+types/feed";
+
+export function meta({ data }: Route.MetaArgs) {
+  return [
+    { title: "Tekgate | The Research & Tech Feed" },
+    { name: "description", content: "Discover the latest research, posts, and discussions on Tekgate." },
+    
+    // Open Graph / Facebook (From your Explanation.md: "if research gate and facebook had a baby")
+    { property: "og:type", content: "website" },
+    { property: "og:title", content: "Tekgate | The Research & Tech Feed" },
+    { property: "og:description", content: "Join the community of researchers and developers." },
+    { property: "og:image", content: "https://yourdomain.com/og-feed-image.jpg" },
+    
+    // Twitter
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Tekgate | The Research & Tech Feed" },
+  ];
+}
+
+export default function Feed() {
+  return (
+    <section>
+      <h1>Feed</h1>
+      {/* Feed content */}
+    </section>
+  );
+}
+```
+
+
+
 
 # Project Structure
 | app/
